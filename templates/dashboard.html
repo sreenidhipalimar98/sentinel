@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebTester Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">WT</div>
+        <div class="brand-name">WebTester</div>
+      </div>
+      <nav>
+        <div class="nav-section-label">History</div>
+        <ul id="history-list" class="history-list"></ul>
+      </nav>
+      <div class="disclaimer">
+        Only scan sites you own or are authorized to test.
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="run-bar">
+        <input id="url-input" type="text" placeholder="example.com or https://example.com" />
+        <button id="auth-toggle" class="auth-toggle-btn" title="Configure authentication">🔐</button>
+        <button id="run-btn">Run scan</button>
+      </div>
+
+      <div id="auth-panel" class="auth-panel hidden">
+        <div class="auth-panel-header">
+          <span>Authentication</span>
+          <select id="auth-method">
+            <option value="none">None (anonymous)</option>
+            <option value="form">Form login</option>
+            <option value="bearer">Bearer token</option>
+            <option value="cookie">Cookie</option>
+            <option value="basic">Basic auth</option>
+          </select>
+        </div>
+        <div id="auth-fields"></div>
+      </div>
+
+      <div id="status-line" class="status-line"></div>
+
+      <div id="results" class="results hidden">
+        <div class="summary-cards" id="summary-cards"></div>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="security">Security</button>
+          <button class="tab-btn" data-tab="functionality">Functionality</button>
+          <button class="tab-btn" data-tab="screenshots">Screenshots</button>
+        </div>
+
+        <div id="tab-security" class="tab-panel active"></div>
+        <div id="tab-functionality" class="tab-panel"></div>
+        <div id="tab-screenshots" class="tab-panel"></div>
+
+        <a id="download-report" class="download-btn" target="_blank">Download full report (HTML)</a>
+      </div>
+    </main>
+  </div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
