@@ -1,0 +1,29 @@
+# Virtual environment
+venv/
+.venv/
+
+# Database
+*.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+
+# Reports (generated)
+reports/screenshots/
+reports/exports/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

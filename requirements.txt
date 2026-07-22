@@ -1,0 +1,36 @@
+# Web framework
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+
+# Auth
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+bcrypt==4.2.0
+
+# Database
+sqlalchemy==2.0.35
+alembic==1.13.2
+aiosqlite==0.20.0
+
+# Task queue
+celery[redis]==5.4.0
+redis==5.1.1
+
+# Scanner dependencies
+requests==2.32.3
+beautifulsoup4==4.12.3
+lxml>=5.2.2
+pyOpenSSL==24.2.1
+tldextract==5.1.2
+playwright>=1.40.0
+
+# Utilities
+pydantic[email]==2.9.2
+python-dotenv==1.0.1
+apscheduler==3.10.4
+jinja2==3.1.6
+
+# Reporting
+weasyprint==62.3
+markdown==3.7
